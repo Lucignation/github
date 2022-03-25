@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { SearchContext } from '../../Context/SearchContext';
 
 import './Repos.scss';
 
 const Repos = () => {
-  const [search, setSearch] = useState('');
+  const { repos, setRepos } = useContext(SearchContext);
+  // const [search, setSearch] = useState('');
   return (
     <div className='repos'>
       In these repositories
@@ -11,9 +13,9 @@ const Repos = () => {
         <input
           type='text'
           name='owners'
-          value={search}
+          value={repos}
           placeholder='tws/bootstrap, rails/rails'
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setRepos(e.target.value)}
         />
       </span>
     </div>

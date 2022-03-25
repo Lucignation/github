@@ -9,7 +9,7 @@ import './Search.scss';
 const Search = () => {
   const [user, setUser] = useState([]);
   const [vallue, setVallue] = useState('');
-  const { search, setSearch, owners, setOwners, ownersState, setOwnersState } =
+  const { search, setSearch, owners, repos, ownersState, setOwnersState } =
     useContext(SearchContext);
   // const [search, setSearch] = useState('');
 
@@ -36,14 +36,38 @@ const Search = () => {
 
   let returnValue = <span className='search-return-value'>{search}</span>;
 
-  console.log(returnValue.props.children);
+  console.log(repos);
+
+  // let val =
+  //   owners?.length > 0
+  //     ? returnValue.props.children + ' user:' + owners
+  //     : returnValue.props.children;
 
   let val =
-    owners?.length > 0
-      ? returnValue.props.children + ' user:' + owners
+    owners.length > 0
+      ? owners?.length > 0 && repos.length > 0
+        ? returnValue.props.children + ' user:' + owners + ' repo:' + repos
+        : returnValue.props.children + ' user:' + owners
       : returnValue.props.children;
 
-  let valueField;
+  // let action = { user: ' user:', repo: ' repo:' };
+
+  // switch (action) {
+  //   case action.user:
+  //     return returnValue.props.children + ' user:' + owners;
+  //   case action.repo:
+  //     return returnValue.props.children + ' repo:' + repos;
+
+  //   default:
+  //     return action;
+  // }
+
+  // let val =
+  //   owners?.length > 0
+  //     ? returnValue.props.children + ' user:' + owners
+  //     : repos?.length > 0
+  //     ? returnValue.props.children + ' user:' + owners + ' repo:' + repos
+  //     : returnValue.props.children;
 
   return (
     <div className='search-container'>
@@ -67,7 +91,15 @@ const Search = () => {
           <p className='search-value'>{val}</p>
         </form>
       </div>
-      {/* {inpt} */}
+      <span>
+        {owners.length > 0
+          ? owners.length > 0 && repos.length > 0
+            ? repos.length > 0
+              ? search + ' user:' + owners
+              : search + ' user:' + owners + ' repo:' + repos
+            : search + ' repo:' + repos
+          : search}
+      </span>
       {user[0]?.login}
     </div>
   );

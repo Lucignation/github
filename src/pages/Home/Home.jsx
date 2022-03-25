@@ -28,6 +28,7 @@ const Home = () => {
 
   const [owners, setOwners] = useState('');
   const [ownersState, setOwnersState] = useState(false);
+  const [repos, setRepos] = useState('');
 
   // console.log(search);
   return (
@@ -39,6 +40,8 @@ const Home = () => {
         setOwners,
         ownersState,
         setOwnersState,
+        repos,
+        setRepos,
       }}
     >
       <div className='container-page'>
