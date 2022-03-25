@@ -1,0 +1,58 @@
+[
+  { "id": 1, "name": "c", "value": "C", "placeholder": "C" },
+  { "id": 2, "name": "c++", "value": "C++", "placeholder": "C++" },
+  {
+    "id": 3,
+    "name": "c#",
+    "value": "C#",
+    "placeholder": "C#"
+  },
+  {
+    "id": 4,
+    "name": "coffeScript",
+    "value": "CoffeScript",
+    "placeholder": "CoffeScript"
+  },
+  { "id": 5, "name": "java", "value": "Java", "placeholder": "Java" },
+  {
+    "id": 6,
+    "name": "javascript",
+    "value": "JavaScript",
+    "placeholder": "JavaScript"
+  },
+  { "id": 7, "name": "python", "value": "Python", "placeholder": "Python" },
+  {
+    "id": 8,
+    "name": "typescript",
+    "value": "TypeScript",
+    "placeholder": "TypeScript"
+  },
+  {
+    "id": 9,
+    "name": "scala",
+    "value": "Scala",
+    "placeholder": "Scala"
+  },
+  {
+    "id": 10,
+    "name": "objective-c",
+    "value": "Objective-C",
+    "placeholder": "Ojective-C"
+  },
+  { "id": 11, "name": "go", "value": "Go", "placeholder": "Go" },
+  {
+    "id": 12,
+    "name": "ruby",
+    "value": "Ruby/Rails",
+    "placeholder": "Ruby/Rails"
+  },
+  { "id": 13, "name": "html", "value": "HMTL", "placeholder": "HTML" },
+  { "id": 14, "name": "css", "value": "CSS", "placeholder": "CSS" },
+  { "id": 15, "name": "scss", "value": "SCSS", "placeholder": "SCSS" },
+  { "id": 16, "name": "swift", "value": "Swift", "placeholder": "Swift" },
+  { "id": 17, "name": "kotlin", "value": "Kotlin", "placeholder": "Kotlin" },
+  { "id": 18, "name": "less", "value": "LESS", "placeholder": "LESS" },
+  { "id": 19, "name": "angular", "value": "Angular", "placeholder": "Angular" },
+  { "id": 20, "name": "react", "value": "ReactJS", "placeholder": "ReactJS" },
+  { "id": 21, "name": "vuejs", "value": "VueJS", "placeholder": "VueJS" }
+]

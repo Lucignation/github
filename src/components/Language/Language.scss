@@ -1,0 +1,20 @@
+@import '../../../public/css/color.scss';
+
+.language-input select {
+  width: 53%;
+  background-color: $primary-bg;
+  border: 0.2px solid #7a7a7a;
+  padding: 7px;
+  margin-right: 1%;
+  border-radius: 4px;
+  color: $primary-text;
+  font-weight: bold;
+}
+
+.language-input select:focus {
+  outline: 2px solid #001dc0;
+}
+
+.language-input {
+  margin-left: 3.7%;
+}

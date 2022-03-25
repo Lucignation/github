@@ -1,0 +1,20 @@
+@import '../../../public/css/color.scss';
+
+.created-input input[type='text'] {
+  width: 53%;
+  background-color: $primary-bg;
+  border: 0.2px solid #7a7a7a;
+  padding: 7px;
+  margin-right: 1%;
+  border-radius: 4px;
+  color: $primary-text;
+  font-weight: bold;
+}
+
+.created-input input[type='text']:focus {
+  outline: 2px solid #001dc0;
+}
+
+.created-input {
+  margin-left: 5.7%;
+}

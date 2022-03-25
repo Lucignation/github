@@ -1,0 +1,28 @@
+.nav-bg {
+  background-color: #242424;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3%;
+}
+
+.nav-item,
+.nav-pages {
+  display: flex;
+  justify-content: space-around;
+  //   background-color: red;
+}
+
+.nav-item form {
+  width: 100%;
+}
+
+.nav-right {
+  padding-right: 3%;
+}
+
+.nav-left {
+  padding-left: 3%;
+  width: 60%;
+  //   display: inline;
+}

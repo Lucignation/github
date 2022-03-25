@@ -1,0 +1,67 @@
+@import '../../../public/css/color.scss';
+
+.search-container {
+  width: 70%;
+  margin: auto;
+
+  margin-top: 7%;
+}
+
+.search-container form {
+  //   display: inline-block;
+  margin-left: 1%;
+}
+
+.search-container input[type='text'] {
+  background-color: $primary-bg;
+  border: 0.2px solid #7a7a7a;
+  padding: 7px;
+  width: 80%;
+  margin-right: 1%;
+  border-radius: 4px;
+  color: none;
+  // font-weight: bold;
+}
+
+.search-container input[type='submit'] {
+  display: inline-block;
+  width: 16%;
+  background-color: #2e2e2e;
+  color: $primary-text;
+  font-weight: bold;
+  padding: 7px;
+  border: 0.2px solid #7a7a7a;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container input[type='text']:focus {
+  outline: 2px solid #001dc0;
+}
+
+.search-container-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-value {
+  position: absolute;
+  top: -25%;
+  font-size: 14px;
+  left: 8px;
+  font-weight: bold;
+  color: #afafaf;
+}
+
+.search-return-value {
+  color: #fff;
+}
+
+// .hide-search {
+//   opacity: 0.2;
+// }
