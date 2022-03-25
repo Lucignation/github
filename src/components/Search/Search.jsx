@@ -80,7 +80,6 @@ const Search = () => {
           {/* <input type='text' defaultValue={val} /> */}
           <input
             type='text'
-            placeholder='Search GitHub'
             name='search'
             // defaultValue={val}
             value={search}
@@ -91,15 +90,6 @@ const Search = () => {
           <p className='search-value'>{val}</p>
         </form>
       </div>
-      <span>
-        {owners.length > 0
-          ? owners.length > 0 && repos.length > 0
-            ? repos.length > 0
-              ? search + ' user:' + owners
-              : search + ' user:' + owners + ' repo:' + repos
-            : search + ' repo:' + repos
-          : search}
-      </span>
       {user[0]?.login}
     </div>
   );
