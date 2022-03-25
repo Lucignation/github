@@ -36,38 +36,21 @@ const Search = () => {
 
   let returnValue = <span className='search-return-value'>{search}</span>;
 
-  console.log(repos);
-
   // let val =
-  //   owners?.length > 0
-  //     ? returnValue.props.children + ' user:' + owners
+  //   owners.length > 0
+  //     ? owners?.length > 0 && repos.length > 0
+  //       ? returnValue.props.children + ' user:' + owners + ' repo:' + repos
+  //       : returnValue.props.children + ' user:' + owners
   //     : returnValue.props.children;
 
   let val =
-    owners.length > 0
-      ? owners?.length > 0 && repos.length > 0
-        ? returnValue.props.children + ' user:' + owners + ' repo:' + repos
+    owners.length > 0 || repos.length > 0
+      ? repos.length > 0
+        ? owners?.length > 0 && repos.length > 0
+          ? returnValue.props.children + ' user:' + owners + ' repo:' + repos
+          : returnValue.props.children + ' repo:' + repos
         : returnValue.props.children + ' user:' + owners
       : returnValue.props.children;
-
-  // let action = { user: ' user:', repo: ' repo:' };
-
-  // switch (action) {
-  //   case action.user:
-  //     return returnValue.props.children + ' user:' + owners;
-  //   case action.repo:
-  //     return returnValue.props.children + ' repo:' + repos;
-
-  //   default:
-  //     return action;
-  // }
-
-  // let val =
-  //   owners?.length > 0
-  //     ? returnValue.props.children + ' user:' + owners
-  //     : repos?.length > 0
-  //     ? returnValue.props.children + ' user:' + owners + ' repo:' + repos
-  //     : returnValue.props.children;
 
   return (
     <div className='search-container'>
