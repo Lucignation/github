@@ -1,0 +1,19 @@
+.search-result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: auto;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #eeeeee44;
+  margin-top: 3%;
+}
+
+.search-result-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.search-result-info img {
+  width: 100px;
+  border-radius: 50px;
+}

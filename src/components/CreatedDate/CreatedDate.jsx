@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { SearchContext } from '../../Context/SearchContext';
 
 import './CreatedDate.scss';
 
 const CreatedDate = () => {
-  const [search, setSearch] = useState('');
+  const { created, setCreated } = useContext(SearchContext);
+  // const [search, setSearch] = useState('');
 
   return (
     <div className='created'>
@@ -12,9 +14,9 @@ const CreatedDate = () => {
         <input
           type='text'
           name='owners'
-          value={search}
+          value={created}
           placeholder='>YYYY-MM-DD, YYYY-MM-DD'
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setCreated(e.target.value)}
         />
       </span>
     </div>
