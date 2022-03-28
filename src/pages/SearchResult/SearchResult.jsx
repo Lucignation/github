@@ -10,14 +10,40 @@ const SearchResult = () => {
   const { result } = useContext(SearchContext);
   const navigate = useNavigate();
 
+  const [users, setUsers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [userPerPage, setUserPerPage] = useState(10);
+
+  useEffect(() => {
+    setUsers(result);
+  }, []);
+
+  const indexOfLastUsers = currentPage * userPerPage;
+  const indexOfFirstUsers = indexOfLastUsers - userPerPage;
+  const currentUsers = users.slice(indexOfFirstUsers, indexOfLastUsers);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  if (currentPage < 1 || userPerPage.length === 0) {
+    setCurrentPage(1);
+    setUserPerPage(10);
+  }
+
+  if (currentPage === currentPage + 1) {
+    setCurrentPage(currentPage);
+  }
+
+  console.log(currentUsers);
+  console.log(currentPage);
+
   //take user back
   const handleBack = () => {
     navigate(-1);
   };
-  console.log(result);
+
   const userResult =
-    result &&
-    result.map((user) => (
+    currentUsers &&
+    currentUsers.map((user) => (
       <div key={user.id} className='search-result'>
         <div className='search-result-info'>
           <img src={user.avatar_url} alt={user.login} />
@@ -42,7 +68,13 @@ const SearchResult = () => {
       </h1>
       {userResult}
       <p onClick={handleBack}>Back</p>
-      <Pagination data={result} pageLimit={5} dataLimit={10} />
+      <Pagination
+        userPerPage={userPerPage}
+        totalUsers={users.length}
+        paginate={paginate}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
 
       <Repository />
     </>
